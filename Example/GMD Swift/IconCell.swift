@@ -10,8 +10,8 @@ import UIKit
 
 class IconCell: UITableViewCell {
 
-    @IBOutlet weak var lBig: UILabel!
-    @IBOutlet weak var lMedium: UILabel!
-    @IBOutlet weak var lSmall: UILabel!
-    @IBOutlet weak var lFont: UILabel!
+    @IBOutlet weak var iconBig: UILabel!
+    @IBOutlet weak var iconMedium: UILabel!
+    @IBOutlet weak var iconSmall: UILabel!
+    @IBOutlet weak var label: UILabel!
 }

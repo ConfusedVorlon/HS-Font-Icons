@@ -58,18 +58,18 @@ class MissingViewController: UIViewController, UITableViewDataSource, UITableVie
         let icon = GMDType.gmd3dRotation
         
         //set with known char to set the font
-        c.lSmall.GMDIcon = icon
-        c.lMedium.GMDIcon = icon
-        c.lBig.GMDIcon = icon
+        c.iconSmall.GMDIcon = icon
+        c.iconMedium.GMDIcon = icon
+        c.iconBig.GMDIcon = icon
         
         let character = missingItems[indexPath.row]
-        c.lSmall.text = character.description
-        c.lMedium.text = character.description
-        c.lBig.text = character.description
+        c.iconSmall.text = character.description
+        c.iconMedium.text = character.description
+        c.iconBig.text = character.description
         
         let number = character.description.utf16.first!
         let hex = String(format:"%02X", number)
-        c.lFont.text = ("0x\(hex)")
+        c.label.text = ("0x\(hex)")
         
         return c
     }

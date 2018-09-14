@@ -53,16 +53,16 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         let c = tableView.dequeueReusableCell(withIdentifier: "IconCell") as! IconCell
         
-        c.lFont.text = resultSearchController.isActive ? filteredData[indexPath.row] : helper[indexPath.row]
+        c.label.text = resultSearchController.isActive ? filteredData[indexPath.row] : helper[indexPath.row]
         
         let index = resultSearchController.isActive ? helper.index(of: filteredData[indexPath.row])! : indexPath.row
         
         let icon = GMDType.allCases[index]
         
-        c.lSmall.GMDIcon = icon
-        c.lMedium.GMDIcon = icon
-        c.lBig.GMDIcon = icon
-        
+        c.iconSmall.GMDIcon = icon
+        c.iconMedium.GMDIcon = icon
+        c.iconBig.GMDIcon = icon
+     
         return c
     }
     
