@@ -13,6 +13,7 @@ public extension UIButton {
     
     /**
      To set an icon, use i.e. `buttonName.setIcon(GMDIcon.public)`
+     Note that this clears any text
      */
     func setIcon(_ icon: GMDIcon, forState state: UIControl.State = .normal, iconSize:CGFloat? = nil) {
         
@@ -27,6 +28,7 @@ public extension UILabel {
     
     /**
      To set an icon, use i.e. `labelName.icon = GMDIcon.adjust`
+     Note that this clears any text
      */
     var icon: GMDIcon? {
         
@@ -56,7 +58,6 @@ public extension UIBarButtonItem {
      */
     func setIcon(_ icon: GMDIcon, iconSize: CGFloat) {
         
-        GMDFont.loadFontIfNeeded()
         let font = GMDFont.font(size: iconSize)
 
         setTitleTextAttributes([NSAttributedString.Key.font: font], for: UIControl.State())

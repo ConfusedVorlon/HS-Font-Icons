@@ -1056,15 +1056,18 @@ public enum GMDIcon: Int, CaseIterable {
     case toggleOn = 0xE9F6
     
     
-    static var count: Int {
-        return GMDIcon.allCases.count
-    }
-    
+    /// Returns the current text. You can use string manipulation to add multiple icons together
     public var text: String {
         return String(utf16CodeUnits: [UInt16(rawValue)], count: 1)
     }
 
     
+    /// Get a UIImage of the icon
+    ///
+    /// - Parameters:
+    ///   - size: required pixel size of the image
+    ///   - color: required colour
+    /// - Returns: rendered image
     func image( size : CGSize, color: UIColor = UIColor.gray) -> UIImage? {
         
         // Create a context to render into.

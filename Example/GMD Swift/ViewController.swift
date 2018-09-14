@@ -68,7 +68,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return resultSearchController.isActive ? filteredData.count :  GMDIcon.count
+        return resultSearchController.isActive ? filteredData.count :  GMDIcon.allCases.count
     }
     
     
