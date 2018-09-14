@@ -30,7 +30,18 @@ var cName = element.classList[0].slice(9)
 var parts = cName.split("_")
 parts = parts.map(function(part){return part.charAt(0).toUpperCase() + part.substr(1);})
 
-iconNames.push( ["gmd" + parts.join("")] )
+var name = parts.join("")
+name = name.slice(0,1).toLowerCase()+name.slice(1)
+
+var protectedWords = ["public","extension","class"]
+if (protectedWords.indexOf(name) > -1 ) {
+    name = "_" + name
+}
+if (name.match(/^\d/)) {
+    name = "_" + name
+}
+
+iconNames.push( ["\""+name+"\""] )
 };
 
 console.log("["+iconNames.join()+"]")

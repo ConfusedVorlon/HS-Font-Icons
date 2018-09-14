@@ -12,9 +12,9 @@ import UIKit
 public extension UIButton {
     
     /**
-     To set an icon, use i.e. `buttonName.setGMDIcon(GMDType.GMBPublic, forState: .Normal)`
+     To set an icon, use i.e. `buttonName.setIcon(GMDIcon.public)`
      */
-    func setGMDIcon(_ icon: GMDType, forState state: UIControl.State = .normal, iconSize:CGFloat? = nil) {
+    func setIcon(_ icon: GMDIcon, forState state: UIControl.State = .normal, iconSize:CGFloat? = nil) {
         
         if let titleLabel = titleLabel {
             titleLabel.font = GMDFont.font(size: iconSize ?? titleLabel.font.pointSize)
@@ -26,9 +26,9 @@ public extension UIButton {
 public extension UILabel {
     
     /**
-     To set an icon, use i.e. `labelName.GMDIcon = GMDType.GMDAdjust`
+     To set an icon, use i.e. `labelName.icon = GMDIcon.adjust`
      */
-    var GMDIcon: GMDType? {
+    var icon: GMDIcon? {
         
         set {
             
@@ -41,7 +41,7 @@ public extension UILabel {
         get {
             
             if text?.utf16.count == 1 {
-                return GMDType(rawValue: Int(text!.utf16.first!))
+                return GMDIcon(rawValue: Int(text!.utf16.first!))
             }
             
             return nil
@@ -52,9 +52,9 @@ public extension UILabel {
 public extension UIBarButtonItem {
     
     /**
-     To set an icon, use i.e. `barName.GMDIcon = GMDType.GMDPublic`
+     To set an icon, use i.e. `barName.icon = GMDIcon._public`
      */
-    func setGMDIcon(_ icon: GMDType, iconSize: CGFloat) {
+    func setIcon(_ icon: GMDIcon, iconSize: CGFloat) {
         
         GMDFont.loadFontIfNeeded()
         let font = GMDFont.font(size: iconSize)
@@ -64,9 +64,9 @@ public extension UIBarButtonItem {
     }
     
     /**
-     To set an icon, use i.e. `barName.setGMDIcon(GMDType.GMDPublic, iconSize: 35)`
+     To set an icon, use i.e. `barName.setGMDIcon(GMDIcon._public, iconSize: 35)`
      */
-    var GMDIcon: GMDType? {
+    var icon: GMDIcon? {
         set {
             let font = GMDFont.font(size: 23)
             setTitleTextAttributes([NSAttributedString.Key.font: font], for: UIControl.State())
@@ -76,7 +76,7 @@ public extension UIBarButtonItem {
         get {
             
             if title?.utf16.count == 1 {
-                return GMDType(rawValue: Int(title!.utf16.first!))
+                return GMDIcon(rawValue: Int(title!.utf16.first!))
             }
             
             return nil

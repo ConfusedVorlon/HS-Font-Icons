@@ -40,8 +40,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             return controller
         })()
         
-        bGithub.GMDIcon = GMDType.gmdPublic
-        bMissing.GMDIcon = GMDType.gmdReportProblem
+        bGithub.icon = GMDIcon._public
+        bMissing.icon = GMDIcon.reportProblem
 
 
     
@@ -57,18 +57,18 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         let index = resultSearchController.isActive ? helper.index(of: filteredData[indexPath.row])! : indexPath.row
         
-        let icon = GMDType.allCases[index]
+        let icon = GMDIcon.allCases[index]
         
-        c.iconSmall.GMDIcon = icon
-        c.iconMedium.GMDIcon = icon
-        c.iconBig.GMDIcon = icon
+        c.iconSmall.icon = icon
+        c.iconMedium.icon = icon
+        c.iconBig.icon = icon
      
         return c
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return resultSearchController.isActive ? filteredData.count :  GMDType.count
+        return resultSearchController.isActive ? filteredData.count :  GMDIcon.count
     }
     
     
@@ -91,7 +91,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         }
     }
     
-    let helper = GMDType.allCases.map { (item) -> String in
+    let helper = GMDIcon.allCases.map { (item) -> String in
         return "\(item)"
     }
 
