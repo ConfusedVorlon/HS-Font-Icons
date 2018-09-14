@@ -5,7 +5,7 @@ Forked from original project by [@vaberer](https://twitter.com/vaberer)
 Updated for Swift 4.2
 The code now lists many more icons from the 3.0.1 release, and includes the updated font file
 
-Code is somewhat rewritten to make updating icons much easier - but it is almost completely compatible with the original.
+Version 2.0 has a new syntax which is not compatible with version 1.0
 
 If you want a new icon, you just have to find and update the codepoint.
 See instructions in the demo project UpdatingNotes.txt on how to do that.
@@ -50,17 +50,17 @@ import HS_Google_Material_Design_Icons
 
 ### UILabel
 ```Swift
-    labelName.GMDIcon = .gmdPublic
+    labelName.icon = .public
 
     labelName.textColor = UIColor.redColor()
 ```
 
 ### UIButton
 ```Swift
-    buttonName.setGMDIcon(.gmdPublic)
+    buttonName.setIcon(.public)
 
     //or if you want to set an icon size and/or specify the state, use:
-    buttonName.setGMDIcon(.gmdPublic, forState: .highlighted, iconSize: 30)
+    buttonName.setIcon(.public, forState: .highlighted, iconSize: 30)
 
     buttonName.setTitleColor(UIColor.redColor(), forState: .normal)
 ```
@@ -68,15 +68,21 @@ import HS_Google_Material_Design_Icons
 ### UIBarButtonItem
 ```Swift
     //Standard font size
-    barName.GMDIcon = .gmdPublic
+    barName.icon = .public
 
     //Custom font size
-    barName.setGMDIcon(.gmdPublic, iconSize: 35)
+    barName.setIcon(.public, iconSize: 35)
 
     barName.tintColor = UIColor.redColor()
 ```
 
+### Updating from Version 1.x
 
+`GMDType` has been replaced with `GMDIcon`
+
+specific icons are now of the form `GMDIcon.alternateEmail`  rather than `GMDType.gmdAlternateEmail`
+
+methods like `setGMDIcon`  and `GMDIcon` have been replaced with `setIcon` and `icon`
 
 
 ## Original Author

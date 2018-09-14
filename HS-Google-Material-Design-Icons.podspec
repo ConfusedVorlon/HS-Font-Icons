@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'HS-Google-Material-Design-Icons'
-  s.version = '1.2.1'
+  s.version = '2.0.0'
   s.swift_version = '4.2'
   s.license = 'MIT'
   s.summary = 'Google Material Design Icons Library for iOS'
@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   s.source = { :git => 'https://github.com/ConfusedVorlon/HS-Google-Material-Design-Icons.git', :tag => s.version }
 
   s.ios.deployment_target = '9.0'
-  s.source_files   = ['Source/GMDIcon.swift']
+  s.source_files   = ['Source/*.swift']
   s.resource_bundle = { 'HS-Google-Material-Design-Icons' => 'Source/GMDIcons.ttf' }
   s.frameworks = 'UIKit', 'CoreText'
   s.requires_arc = true
