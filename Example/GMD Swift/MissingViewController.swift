@@ -31,7 +31,7 @@ class MissingViewController: UIViewController, UITableViewDataSource, UITableVie
     
     func buildMissingItemList() {
         
-        let font = GMDType.font()
+        let font = GMDFont.font()
         if var extantChars = font.fontDescriptor.object(forKey: .characterSet) as? CharacterSet {
             let knownCharString:String = GMDType.allCases.reduce("") { (total, icon) -> String in
                 total + icon.text

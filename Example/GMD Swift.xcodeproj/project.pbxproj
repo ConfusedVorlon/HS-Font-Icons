@@ -18,6 +18,8 @@
 		D44CBB23213061BE002741C7 /* UpdatingNotes.txt in Resources */ = {isa = PBXBuildFile; fileRef = D44CBB22213061BE002741C7 /* UpdatingNotes.txt */; };
 		D44CBB252130628E002741C7 /* CaseGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44CBB242130628E002741C7 /* CaseGenerator.swift */; };
 		D44CBB272131790F002741C7 /* MissingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44CBB262131790F002741C7 /* MissingViewController.swift */; };
+		D485877A214C079B0066BB1E /* GMDIcon+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4858779214C079B0066BB1E /* GMDIcon+Extensions.swift */; };
+		D485877C214C08A00066BB1E /* GMDFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = D485877B214C08A00066BB1E /* GMDFont.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		D44CBB22213061BE002741C7 /* UpdatingNotes.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = UpdatingNotes.txt; sourceTree = "<group>"; };
 		D44CBB242130628E002741C7 /* CaseGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseGenerator.swift; sourceTree = "<group>"; };
 		D44CBB262131790F002741C7 /* MissingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MissingViewController.swift; sourceTree = "<group>"; };
+		D4858779214C079B0066BB1E /* GMDIcon+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GMDIcon+Extensions.swift"; sourceTree = "<group>"; };
+		D485877B214C08A00066BB1E /* GMDFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GMDFont.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,7 +89,9 @@
 			isa = PBXGroup;
 			children = (
 				4E19E0251B91B34800825B73 /* GMDIcon.swift */,
+				D4858779214C079B0066BB1E /* GMDIcon+Extensions.swift */,
 				4E19E0271B91B35E00825B73 /* GMDIcons.ttf */,
+				D485877B214C08A00066BB1E /* GMDFont.swift */,
 			);
 			name = "Source - Google Material Icons Swift";
 			path = ../../Source;
@@ -167,9 +173,11 @@
 				4E19E0121B919AFC00825B73 /* ViewController.swift in Sources */,
 				D44CBB272131790F002741C7 /* MissingViewController.swift in Sources */,
 				4E19E0261B91B34800825B73 /* GMDIcon.swift in Sources */,
+				D485877A214C079B0066BB1E /* GMDIcon+Extensions.swift in Sources */,
 				4E19E0101B919AFC00825B73 /* AppDelegate.swift in Sources */,
 				D44CBB252130628E002741C7 /* CaseGenerator.swift in Sources */,
 				4E19E0241B919D5400825B73 /* IconCell.swift in Sources */,
+				D485877C214C08A00066BB1E /* GMDFont.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
