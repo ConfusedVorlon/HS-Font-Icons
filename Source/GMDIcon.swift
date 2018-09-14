@@ -1207,10 +1207,57 @@ public enum GMDType: Int, CaseIterable {
         }
     }
     
-    static func font() -> UIFont {
-        return UIFont(name: GMDStruct.FontName, size: 23)!
+    static func font(size:CGFloat = 23) -> UIFont {
+        return UIFont(name: GMDStruct.FontName, size: size)!
     }
     
-    
+    func image( size : CGSize, color: UIColor = UIColor.gray) -> UIImage? {
+        
+        // Create a context to render into.
+        UIGraphicsBeginImageContextWithOptions(size, false, 0.0)
+        defer {
+            UIGraphicsEndImageContext()
+        }
+        
+        // Work out what size of font will give us a rendering of the string
+        // that will fit in an image of the desired size.
+        
+        // We do this by measuring the string at the given font size and working
+        // out the ratio scale to it by to get the desired size of image.
+        let string = self.text
+        var font = GMDType.font(size: size.height)
+        
+        // Measure the string size.
+        var stringSize: CGSize? = string.size(withAttributes: [NSAttributedStringKey.font : font])
+        
+        // Work out what it should be scaled by to get the desired size.
+        let xRatio: CGFloat = size.width / (stringSize?.width ?? 0.0)
+        let yRatio: CGFloat = size.height / (stringSize?.height ?? 0.0)
+        var ratio = min(xRatio, yRatio)
+        
+        // Work out the point size that'll give us the desired image size, and
+        // create a UIFont that size.
+        let oldFontSize: CGFloat = font.pointSize
+        let newFontSize = floor(oldFontSize * ratio)
+        ratio = newFontSize / oldFontSize
+        font = font.withSize(newFontSize)
+        
+        // What size is the string with this new font
+        stringSize = string.size(withAttributes: [NSAttributedStringKey.font : font])
+        
+        // Work out where the origin of the drawn string should be to get it in
+        // the centre of the image.
+        let textOrigin = CGPoint(x: (size.width - (stringSize?.width ?? 0.0)) / 2, y: (size.height - (stringSize?.height ?? 0.0)) / 2)
+        
+        // Draw the string into out image!
+        string.draw(at: textOrigin, withAttributes: [NSAttributedStringKey.font : font, NSAttributedStringKey.foregroundColor : color])
+
+        
+        // We're done!  Grab the image and return it!
+        // (Don't forget to end the image context first though!)
+        let retImage: UIImage? = UIGraphicsGetImageFromCurrentImageContext()
+        
+        return retImage
+    }
 }
 
