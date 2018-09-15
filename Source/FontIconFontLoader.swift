@@ -10,25 +10,28 @@ import Foundation
 import UIKit
 
 
-private struct GMDStruct {
-    static let fileFontName = "GMDIcons"
-    static let fontName = "MaterialIcons-Regular"
-}
+public class FontIconFontLoader {
+    let fileName:String
+    let fontName:String
+    
+    public init(fileName:String, fontName:String) {
+        self.fileName = fileName
+        self.fontName = fontName
+    }
+    
 
-
-public class GMDFont {
-
-    private static var loadFont:Bool = {
-        var iconBundle = Bundle(for: GMDFont.self)
+    private func loadFont()
+    {
+        let iconBundle = Bundle(for: FontIconFontLoader.self)
         var fontURL:URL!
         let identifier = iconBundle.bundleIdentifier!
         
         if identifier.hasPrefix("org.cocoapods") {
-            fontURL = iconBundle.url(forResource: GMDStruct.fileFontName,
+            fontURL = iconBundle.url(forResource: fontName,
                                      withExtension: "ttf",
                                      subdirectory: "HS-Google-Material-Design-Icons.bundle")!
         } else {
-            fontURL = iconBundle.url(forResource: GMDStruct.fileFontName, withExtension: "ttf")!
+            fontURL = iconBundle.url(forResource: fileName, withExtension: "ttf")!
         }
         
         let data = try! Data(contentsOf: fontURL)
@@ -43,27 +46,26 @@ public class GMDFont {
             let nsError = error!.takeUnretainedValue() as AnyObject as! NSError
             NSException(name: NSExceptionName.internalInconsistencyException, reason: errorDescription as String, userInfo: [NSUnderlyingErrorKey: nsError]).raise()
         }
-        
+    }
+    
+    lazy var loadFontIfNeeded:Bool = {
+        if (UIFont.fontNames(forFamilyName: fontName).count == 0) {
+            loadFont()
+        }
         return true
     }()
     
-    private static func loadFontIfNeeded() {
-        if (UIFont.fontNames(forFamilyName: GMDStruct.fontName).count == 0) {
-            _ = GMDFont.loadFont
-        }
-    }
+    private static let loadingError = "FontIcon not found in the bundle or not associated with Info.plist when manual installation was performed. ******"
     
-    private static let loadingError = "****** GOOGLE MATERIAL DESIGN ICONS SWIFT - Google Material Design icons font not found in the bundle or not associated with Info.plist when manual installation was performed. ******"
-    
-    /// Get the Google Material Design font
+    /// Get the font
     ///
     /// - Parameter size: point size
     /// - Returns: UIFont
-    static func font(size:CGFloat = 23) -> UIFont {
-        GMDFont.loadFontIfNeeded()
+    func font(size:CGFloat) -> UIFont {
+        _ = loadFontIfNeeded
         
-        let font = UIFont(name: GMDStruct.fontName, size: size)
-        assert(font != nil, GMDFont.loadingError)
+        let font = UIFont(name: fontName, size: size)
+        assert(font != nil, FontIconFontLoader.loadingError)
         return font!
     }
 }

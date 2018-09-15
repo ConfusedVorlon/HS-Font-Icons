@@ -5,11 +5,11 @@ import UIKit
 /**
  List of all icons in Google Material Design Font
  */
-public enum GMDIcon: Int, CaseIterable {
+public enum GMDIcon: Int, CaseIterable, FontIcon, RawRepresentable {
+    public static let fontLoader: FontIconFontLoader = FontIconFontLoader(fileName: "GMDIcons", fontName:"MaterialIcons-Regular" )
     
     //See UpdatingNotes.txt for info on how to add missing glyphs
-    
-    
+
     case _3dRotation = 0xE84D
     case accessibility = 0xE84E
     case accessibilityNew = 0xE92C
@@ -1054,68 +1054,6 @@ public enum GMDIcon: Int, CaseIterable {
     case starHalf = 0xE839
     case toggleOff = 0xE9F5
     case toggleOn = 0xE9F6
-    
-    
-    /// Returns the current text. You can use string manipulation to add multiple icons together
-    public var text: String {
-        return String(utf16CodeUnits: [UInt16(rawValue)], count: 1)
-    }
-
-    
-    /// Get a UIImage of the icon
-    ///
-    /// - Parameters:
-    ///   - size: required pixel size of the image
-    ///   - color: required colour
-    /// - Returns: rendered image
-    func image( size : CGSize, color: UIColor = UIColor.gray) -> UIImage? {
-        
-        // Create a context to render into.
-        UIGraphicsBeginImageContextWithOptions(size, false, 0.0)
-        defer {
-            UIGraphicsEndImageContext()
-        }
-        
-        // Work out what size of font will give us a rendering of the string
-        // that will fit in an image of the desired size.
-        
-        // We do this by measuring the string at the given font size and working
-        // out the ratio scale to it by to get the desired size of image.
-        let string = self.text
-        var font = GMDFont.font(size: size.height)
-        
-        // Measure the string size.
-        var stringSize: CGSize? = string.size(withAttributes: [NSAttributedString.Key.font : font])
-        
-        // Work out what it should be scaled by to get the desired size.
-        let xRatio: CGFloat = size.width / (stringSize?.width ?? 0.0)
-        let yRatio: CGFloat = size.height / (stringSize?.height ?? 0.0)
-        var ratio = min(xRatio, yRatio)
-        
-        // Work out the point size that'll give us the desired image size, and
-        // create a UIFont that size.
-        let oldFontSize: CGFloat = font.pointSize
-        let newFontSize = floor(oldFontSize * ratio)
-        ratio = newFontSize / oldFontSize
-        font = font.withSize(newFontSize)
-        
-        // What size is the string with this new font
-        stringSize = string.size(withAttributes: [NSAttributedString.Key.font : font])
-        
-        // Work out where the origin of the drawn string should be to get it in
-        // the centre of the image.
-        let textOrigin = CGPoint(x: (size.width - (stringSize?.width ?? 0.0)) / 2, y: (size.height - (stringSize?.height ?? 0.0)) / 2)
-        
-        // Draw the string into out image!
-        string.draw(at: textOrigin, withAttributes: [NSAttributedString.Key.font : font, NSAttributedString.Key.foregroundColor : color])
-
-        
-        // We're done!  Grab the image and return it!
-        // (Don't forget to end the image context first though!)
-        let retImage: UIImage? = UIGraphicsGetImageFromCurrentImageContext()
-        
-        return retImage
-    }
 
 }
 
