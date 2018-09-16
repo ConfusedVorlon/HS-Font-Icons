@@ -17,7 +17,29 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '9.0'
   s.source_files   = ['Source/*.swift']
-  s.resource_bundle = { 'HS-Google-Material-Design-Icons' => 'Source/GMDIcons.ttf' }
   s.frameworks = 'UIKit', 'CoreText'
   s.requires_arc = true
+  
+  s.default_subspecs = 'GMD','FARegular','FASolid','FABrand'
+  
+  s.subspec 'GMD' do |sub|
+      sub.source_files = 'Source/GMD/*.swift'
+      sub.resource_bundle = { 'MaterialIcons-Regular' => 'Source/GMD/GMDIcons.ttf' }
+  end
+  
+  s.subspec 'FARegular' do |sub|
+      sub.source_files = 'Source/FARegular/*.swift'
+      sub.resource_bundle = { 'FontAwesome5FreeRegular' => 'Source/FARegular/*.ttf' }
+  end
+  
+  s.subspec 'FASolid' do |sub|
+      sub.source_files = 'Source/FASolid/*.swift'
+      sub.resource_bundle = { 'FontAwesome5FreeSolid' => 'Source/FASolid/*.ttf' }
+  end
+  
+  s.subspec 'FABrand' do |sub|
+      sub.source_files = 'Source/FABrands/*.swift'
+      sub.resource_bundle = { 'FontAwesome5BrandsRegular' => 'Source/FABrands/*.ttf' }
+  end
+  
 end

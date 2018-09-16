@@ -15,11 +15,15 @@ public extension UIButton {
      To set an icon, use i.e. `buttonName.setIcon(GMDIcon.public)`
      Note that this clears any text
      */
-    func setIcon(_ icon: FontIcon, forState state: UIControl.State = .normal, iconSize:CGFloat? = nil) {
+    func setIcon(_ icon: FontIcon, forState state: UIControl.State = .normal, iconSize:CGFloat? = nil, color: UIColor? = nil) {
         
         if let titleLabel = titleLabel {
             titleLabel.font = type(of: icon).font(size: iconSize ?? titleLabel.font.pointSize)
             setTitle(icon.text, for: state)
+            
+            if let color = color {
+                self.setTitleColor(color, for: state)
+            }
         }
     }
 }

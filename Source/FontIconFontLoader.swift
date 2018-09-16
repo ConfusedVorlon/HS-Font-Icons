@@ -27,9 +27,12 @@ public class FontIconFontLoader {
         let identifier = iconBundle.bundleIdentifier!
         
         if identifier.hasPrefix("org.cocoapods") {
-            fontURL = iconBundle.url(forResource: fontName,
-                                     withExtension: "ttf",
-                                     subdirectory: "HS-Google-Material-Design-Icons.bundle")!
+            
+            let fontBundleURL = iconBundle.resourceURL?.appendingPathComponent(fontName).appendingPathExtension("bundle")
+            print("fontBundleURL: \(String(describing: fontBundleURL))")
+            let resourceBundle = Bundle(url: fontBundleURL!)!
+            fontURL = resourceBundle.url(forResource: fileName,
+                                     withExtension: "ttf")!
         } else {
             fontURL = iconBundle.url(forResource: fileName, withExtension: "ttf")!
         }
@@ -55,7 +58,7 @@ public class FontIconFontLoader {
         return true
     }()
     
-    private static let loadingError = "FontIcon not found in the bundle or not associated with Info.plist when manual installation was performed. ******"
+
     
     /// Get the font
     ///
@@ -65,7 +68,15 @@ public class FontIconFontLoader {
         _ = loadFontIfNeeded
         
         let font = UIFont(name: fontName, size: size)
-        assert(font != nil, FontIconFontLoader.loadingError)
+        guard font != nil else {
+            print("loaded fonts:")
+            UIFont.familyNames.forEach({ familyName in
+                let fontNames = UIFont.fontNames(forFamilyName: familyName)
+                print(familyName, fontNames)
+            })
+            fatalError("failed to load \(fontName)")
+        }
+        
         return font!
     }
 }

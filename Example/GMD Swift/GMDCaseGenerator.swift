@@ -8,18 +8,12 @@
 
 import Foundation
 
-class CaseGenerator {
+class GMDCaseGenerator {
     static func printNewCases() {
         for iconName in iconNames {
             if let foundCase = caseLookup[iconName] {
                 let hex = String(format:"%02X", foundCase.rawValue)
-                
-//                var name = "\(iconName)"
-//                var lastPart = name.dropFirst(4)
-//                let firstChar = String(name.first!).lowercased()
-//                lastPart = lastPart.dropFirst()
-//                let newName = firstChar + String(lastPart)
-                
+                          
                 print("case \(iconName) = 0x\(hex)")
             }
             else {
