@@ -16,7 +16,7 @@ You can easily add your own font icon families (and please send a pull request i
 
 - iOS 8.0+
 - Xcode 10
-- Swift 4.2
+- Swift 5.0
 
 ## Installation
 
