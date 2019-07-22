@@ -31,7 +31,7 @@ class MissingViewController: UIViewController, UITableViewDataSource, UITableVie
     
     func buildMissingItemList() {
         
-        let font = GMDFont.font()
+        let font = GMDIcon.font()
         if var extantChars = font.fontDescriptor.object(forKey: .characterSet) as? CharacterSet {
             let knownCharString:String = GMDIcon.allCases.reduce("") { (total, icon) -> String in
                 total + icon.text
@@ -58,9 +58,9 @@ class MissingViewController: UIViewController, UITableViewDataSource, UITableVie
         let icon = GMDIcon._3dRotation
         
         //set with known char to set the font
-        c.iconSmall.icon = icon
-        c.iconMedium.icon = icon
-        c.iconBig.icon = icon
+        c.iconSmall.setIcon(icon)
+        c.iconMedium.setIcon(icon)
+        c.iconBig.setIcon(icon)
         
         let character = missingItems[indexPath.row]
         c.iconSmall.text = character.description

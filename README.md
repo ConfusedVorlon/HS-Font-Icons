@@ -1,20 +1,11 @@
-# Google Material Design Icons
+# HS-Font-Icons
 
-Forked from original project by [@vaberer](https://twitter.com/vaberer)
+Easily use resolution-independant font-icons
 
-Updated for Swift 4.2
-The code now lists many more icons from the 3.0.1 release, and includes the updated font file
+Currently Supports
+- Google Material Icons (3.0.1)
+- Font Awesome (5.3)
 
-Version 2.0 has a new syntax which is not compatible with version 1.0
-
-If you want a new icon, you just have to find and update the codepoint.
-See instructions in the demo project UpdatingNotes.txt on how to do that.
-
-Various convenience methods have been updated to make them even more convenient.
-
-
-Google Material Design Icons Swift library for iOS.
-It uses font glyphs rather than images, so they can be displayed perfectly at any size & resolution. [Google Design Material Icons](https://www.google.com/design/icons/).
 
 
 <p align="center">
@@ -25,6 +16,7 @@ It uses font glyphs rather than images, so they can be displayed perfectly at an
 
 - iOS 8.0+
 - Xcode 10
+- Swift 4.2
 
 ## Installation
 
@@ -36,12 +28,12 @@ source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '9.0'
 use_frameworks!
 
-pod 'HS-Google-Material-Design-Icons'
+pod 'HS-Font-Icons'
 ```
 
 Do not forget to import to your swift files where you want to use this library:
 ```swift
-import HS_Google_Material_Design_Icons
+import HS_Font_Icons
 ```
 
 
@@ -76,16 +68,8 @@ import HS_Google_Material_Design_Icons
     barName.tintColor = UIColor.redColor()
 ```
 
-### Updating from Version 1.x
 
-`GMDType` has been replaced with `GMDIcon`
-
-specific icons are now of the form `GMDIcon.alternateEmail`  rather than `GMDType.gmdAlternateEmail`
-
-methods like `setGMDIcon`  and `GMDIcon` have been replaced with `setIcon` and `icon`
-
-
-## Original Author
+## Original Based on Google-Material-Design-Icons
 
 Patrik Vaberer, patrik.vaberer@gmail.com
 
@@ -95,6 +79,6 @@ Patrik Vaberer, patrik.vaberer@gmail.com
 
 ### Licence
 
-Google Material Design Icons is available under the MIT license. See the LICENSE file for more info.
+HS-Font-Icons Icons is available under the MIT license. See the LICENSE file for more info.
 
 

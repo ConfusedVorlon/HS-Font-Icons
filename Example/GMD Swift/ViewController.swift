@@ -40,8 +40,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             return controller
         })()
         
-        bGithub.icon = GMDIcon._public
-        bMissing.icon = GMDIcon.reportProblem
+        bGithub.setIcon(GMDIcon._public)
+        bMissing.setIcon(GMDIcon.reportProblem)
 
 
     
@@ -55,13 +55,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         c.label.text = resultSearchController.isActive ? filteredData[indexPath.row] : helper[indexPath.row]
         
-        let index = resultSearchController.isActive ? helper.index(of: filteredData[indexPath.row])! : indexPath.row
+        let index = resultSearchController.isActive ? helper.firstIndex(of: filteredData[indexPath.row])! : indexPath.row
         
         let icon = GMDIcon.allCases[index]
         
-        c.iconSmall.icon = icon
-        c.iconMedium.icon = icon
-        c.iconBig.icon = icon
+        c.iconSmall.setIcon(icon)
+        c.iconMedium.setIcon(icon)
+        c.iconBig.setIcon(icon)
      
         return c
     }

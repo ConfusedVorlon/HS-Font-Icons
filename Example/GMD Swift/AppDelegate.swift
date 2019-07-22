@@ -21,7 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.font: font, NSAttributedString.Key.foregroundColor: UIColor.black]
         }
         
-        CaseGenerator.printNewCases()
+        //GMDCaseGenerator.printNewCases()
+        FACaseGenerator.printNewCases()
         
         return true
     }
