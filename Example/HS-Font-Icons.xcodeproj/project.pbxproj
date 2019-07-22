@@ -16,9 +16,9 @@
 		D44CBB23213061BE002741C7 /* UpdatingNotes.txt in Resources */ = {isa = PBXBuildFile; fileRef = D44CBB22213061BE002741C7 /* UpdatingNotes.txt */; };
 		D44CBB252130628E002741C7 /* GMDCaseGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44CBB242130628E002741C7 /* GMDCaseGenerator.swift */; };
 		D44CBB272131790F002741C7 /* MissingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44CBB262131790F002741C7 /* MissingViewController.swift */; };
-		D485877A214C079B0066BB1E /* FontIcon+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4858779214C079B0066BB1E /* FontIcon+Extensions.swift */; };
-		D485877C214C08A00066BB1E /* FontIconFontLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D485877B214C08A00066BB1E /* FontIconFontLoader.swift */; };
-		D4858780214D1F720066BB1E /* FontIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = D485877F214D1F720066BB1E /* FontIcon.swift */; };
+		D45A680822E6059400062A6E /* FontIconFontLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45A680522E6059400062A6E /* FontIconFontLoader.swift */; };
+		D45A680922E6059400062A6E /* FontIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45A680622E6059400062A6E /* FontIcon.swift */; };
+		D45A680A22E6059400062A6E /* FontIcon+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45A680722E6059400062A6E /* FontIcon+Extensions.swift */; };
 		D4858784214D33F40066BB1E /* GMDIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4858782214D33F40066BB1E /* GMDIcon.swift */; };
 		D4858785214D33F40066BB1E /* GMDIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D4858783214D33F40066BB1E /* GMDIcons.ttf */; };
 		D4858791214D59C50066BB1E /* fa-solid-900.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D4858789214D59C40066BB1E /* fa-solid-900.ttf */; };
@@ -32,7 +32,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4E19E00C1B919AFC00825B73 /* GMD Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GMD Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E19E00C1B919AFC00825B73 /* HS-Font-Icons.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HS-Font-Icons.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E19E00F1B919AFC00825B73 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4E19E0111B919AFC00825B73 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4E19E0141B919AFC00825B73 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -43,9 +43,9 @@
 		D44CBB22213061BE002741C7 /* UpdatingNotes.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = UpdatingNotes.txt; sourceTree = "<group>"; };
 		D44CBB242130628E002741C7 /* GMDCaseGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GMDCaseGenerator.swift; sourceTree = "<group>"; };
 		D44CBB262131790F002741C7 /* MissingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MissingViewController.swift; sourceTree = "<group>"; };
-		D4858779214C079B0066BB1E /* FontIcon+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FontIcon+Extensions.swift"; sourceTree = "<group>"; };
-		D485877B214C08A00066BB1E /* FontIconFontLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontIconFontLoader.swift; sourceTree = "<group>"; };
-		D485877F214D1F720066BB1E /* FontIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontIcon.swift; sourceTree = "<group>"; };
+		D45A680522E6059400062A6E /* FontIconFontLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontIconFontLoader.swift; sourceTree = "<group>"; };
+		D45A680622E6059400062A6E /* FontIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontIcon.swift; sourceTree = "<group>"; };
+		D45A680722E6059400062A6E /* FontIcon+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FontIcon+Extensions.swift"; sourceTree = "<group>"; };
 		D4858782214D33F40066BB1E /* GMDIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GMDIcon.swift; sourceTree = "<group>"; };
 		D4858783214D33F40066BB1E /* GMDIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GMDIcons.ttf; sourceTree = "<group>"; };
 		D4858789214D59C40066BB1E /* fa-solid-900.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "fa-solid-900.ttf"; sourceTree = "<group>"; };
@@ -72,7 +72,7 @@
 		4E19E0031B919AFC00825B73 = {
 			isa = PBXGroup;
 			children = (
-				4E19E00E1B919AFC00825B73 /* GMD Swift */,
+				4E19E00E1B919AFC00825B73 /* HS-Font-Icons */,
 				4E19E00D1B919AFC00825B73 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -80,15 +80,15 @@
 		4E19E00D1B919AFC00825B73 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4E19E00C1B919AFC00825B73 /* GMD Swift.app */,
+				4E19E00C1B919AFC00825B73 /* HS-Font-Icons.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		4E19E00E1B919AFC00825B73 /* GMD Swift */ = {
+		4E19E00E1B919AFC00825B73 /* HS-Font-Icons */ = {
 			isa = PBXGroup;
 			children = (
-				4E19E0221B919C3600825B73 /* Source - Google Material Icons Swift */,
+				4E19E0221B919C3600825B73 /* Source */,
 				D44CBB242130628E002741C7 /* GMDCaseGenerator.swift */,
 				D4858797214D5A080066BB1E /* FACaseGenerator.swift */,
 				4E19E00F1B919AFC00825B73 /* AppDelegate.swift */,
@@ -102,22 +102,30 @@
 				4E19E01B1B919AFC00825B73 /* Info.plist */,
 				D44CBB22213061BE002741C7 /* UpdatingNotes.txt */,
 			);
-			path = "GMD Swift";
+			path = "HS-Font-Icons";
 			sourceTree = "<group>";
 		};
-		4E19E0221B919C3600825B73 /* Source - Google Material Icons Swift */ = {
+		4E19E0221B919C3600825B73 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				D4858779214C079B0066BB1E /* FontIcon+Extensions.swift */,
-				D485877F214D1F720066BB1E /* FontIcon.swift */,
-				D485877B214C08A00066BB1E /* FontIconFontLoader.swift */,
+				D45A680422E6059400062A6E /* Core */,
 				D485878B214D59C50066BB1E /* FABrands */,
 				D485878E214D59C50066BB1E /* FARegular */,
 				D4858788214D59C40066BB1E /* FASolid */,
 				D4858781214D33F40066BB1E /* GMD */,
 			);
-			name = "Source - Google Material Icons Swift";
+			name = Source;
 			path = ../../Source;
+			sourceTree = "<group>";
+		};
+		D45A680422E6059400062A6E /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				D45A680522E6059400062A6E /* FontIconFontLoader.swift */,
+				D45A680622E6059400062A6E /* FontIcon.swift */,
+				D45A680722E6059400062A6E /* FontIcon+Extensions.swift */,
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 		D4858781214D33F40066BB1E /* GMD */ = {
@@ -159,9 +167,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4E19E00B1B919AFC00825B73 /* GMD Swift */ = {
+		4E19E00B1B919AFC00825B73 /* HS-Font-Icons */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4E19E01E1B919AFC00825B73 /* Build configuration list for PBXNativeTarget "GMD Swift" */;
+			buildConfigurationList = 4E19E01E1B919AFC00825B73 /* Build configuration list for PBXNativeTarget "HS-Font-Icons" */;
 			buildPhases = (
 				4E19E0081B919AFC00825B73 /* Sources */,
 				4E19E0091B919AFC00825B73 /* Frameworks */,
@@ -171,9 +179,9 @@
 			);
 			dependencies = (
 			);
-			name = "GMD Swift";
+			name = "HS-Font-Icons";
 			productName = "GMD Swift";
-			productReference = 4E19E00C1B919AFC00825B73 /* GMD Swift.app */;
+			productReference = 4E19E00C1B919AFC00825B73 /* HS-Font-Icons.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -191,7 +199,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 4E19E0071B919AFC00825B73 /* Build configuration list for PBXProject "GMD Swift" */;
+			buildConfigurationList = 4E19E0071B919AFC00825B73 /* Build configuration list for PBXProject "HS-Font-Icons" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -205,7 +213,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4E19E00B1B919AFC00825B73 /* GMD Swift */,
+				4E19E00B1B919AFC00825B73 /* HS-Font-Icons */,
 			);
 		};
 /* End PBXProject section */
@@ -238,14 +246,14 @@
 				4E19E0121B919AFC00825B73 /* ViewController.swift in Sources */,
 				D44CBB272131790F002741C7 /* MissingViewController.swift in Sources */,
 				D4858794214D59C50066BB1E /* FABrandIcon.swift in Sources */,
-				D4858780214D1F720066BB1E /* FontIcon.swift in Sources */,
 				D4858784214D33F40066BB1E /* GMDIcon.swift in Sources */,
-				D485877A214C079B0066BB1E /* FontIcon+Extensions.swift in Sources */,
+				D45A680A22E6059400062A6E /* FontIcon+Extensions.swift in Sources */,
+				D45A680922E6059400062A6E /* FontIcon.swift in Sources */,
 				4E19E0101B919AFC00825B73 /* AppDelegate.swift in Sources */,
 				D44CBB252130628E002741C7 /* GMDCaseGenerator.swift in Sources */,
 				D4858792214D59C50066BB1E /* FASolidIcon.swift in Sources */,
 				4E19E0241B919D5400825B73 /* IconCell.swift in Sources */,
-				D485877C214C08A00066BB1E /* FontIconFontLoader.swift in Sources */,
+				D45A680822E6059400062A6E /* FontIconFontLoader.swift in Sources */,
 				D4858798214D5A080066BB1E /* FACaseGenerator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -382,9 +390,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = "GMD Swift/Info.plist";
+				INFOPLIST_FILE = "HS-Font-Icons/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "vaberer.GMD-Swift";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hobbyistsoftware.HS-Font-Icons";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -394,9 +402,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = "GMD Swift/Info.plist";
+				INFOPLIST_FILE = "HS-Font-Icons/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "vaberer.GMD-Swift";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hobbyistsoftware.HS-Font-Icons";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -405,7 +413,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4E19E0071B919AFC00825B73 /* Build configuration list for PBXProject "GMD Swift" */ = {
+		4E19E0071B919AFC00825B73 /* Build configuration list for PBXProject "HS-Font-Icons" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4E19E01C1B919AFC00825B73 /* Debug */,
@@ -414,7 +422,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4E19E01E1B919AFC00825B73 /* Build configuration list for PBXNativeTarget "GMD Swift" */ = {
+		4E19E01E1B919AFC00825B73 /* Build configuration list for PBXNativeTarget "HS-Font-Icons" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4E19E01F1B919AFC00825B73 /* Debug */,
