@@ -7,7 +7,7 @@ import UIKit
  */
 public enum FABrandIcon: Int, CaseIterable, FontIcon, RawRepresentable {
     public static let fontLoader: FontIconFontLoader = FontIconFontLoader(fileName: "fa-brands-400", fontName:"FontAwesome5BrandsRegular" )
-    
+
     //See UpdatingNotes.txt for info on how to add missing glyphs
 
     case vimeo_square = 0xf194

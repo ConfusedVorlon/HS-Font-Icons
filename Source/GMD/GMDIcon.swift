@@ -7,7 +7,7 @@ import UIKit
  */
 public enum GMDIcon: Int, CaseIterable, FontIcon, RawRepresentable {
     public static let fontLoader: FontIconFontLoader = FontIconFontLoader(fileName: "GMDIcons", fontName:"MaterialIcons-Regular" )
-    
+
     //See UpdatingNotes.txt for info on how to add missing glyphs
 
     case _3dRotation = 0xE84D

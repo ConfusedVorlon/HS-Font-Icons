@@ -7,7 +7,7 @@ import UIKit
  */
 public enum FASolidIcon: Int, CaseIterable, FontIcon, RawRepresentable {
     public static let fontLoader: FontIconFontLoader = FontIconFontLoader(fileName: "fa-solid-900", fontName:"FontAwesome5FreeSolid" )
-    
+
     //See UpdatingNotes.txt for info on how to add missing glyphs
 
     case traffic_light = 0xf637

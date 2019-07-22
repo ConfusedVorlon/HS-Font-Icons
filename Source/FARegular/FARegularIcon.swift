@@ -7,7 +7,7 @@ import UIKit
  */
 public enum FARegularIcon: Int, CaseIterable, FontIcon, RawRepresentable {
     public static let fontLoader: FontIconFontLoader = FontIconFontLoader(fileName: "fa-regular-400", fontName:"FontAwesome5FreeRegular" )
-    
+
     //See UpdatingNotes.txt for info on how to add missing glyphs
 
 

@@ -16,14 +16,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        
+
         if let font = UIFont(name: "HelveticaNeue-Light", size: 20) {
             UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.font: font, NSAttributedString.Key.foregroundColor: UIColor.black]
         }
-        
+
         //GMDCaseGenerator.printNewCases()
         FACaseGenerator.printNewCases()
-        
+
         return true
     }
 
