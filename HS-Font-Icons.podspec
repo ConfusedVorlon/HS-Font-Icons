@@ -18,30 +18,37 @@ Pod::Spec.new do |s|
   s.source = { :git => 'https://github.com/ConfusedVorlon/HS-Font-Icons.git', :tag => s.version }
 
   s.ios.deployment_target = '9.0'
-  s.source_files   = ['Source/*.swift']
   s.frameworks = 'UIKit', 'CoreText'
   s.requires_arc = true
 
-  s.default_subspecs = 'GMD','FARegular','FASolid','FABrand'
+  s.default_subspecs = 'Core','GMD','FARegular','FASolid','FABrand'
+
+  s.subspec 'Core' do |sub|
+      sub.source_files = 'Source/Core/*.swift'
+  end
 
   s.subspec 'GMD' do |sub|
       sub.source_files = 'Source/GMD/*.swift'
       sub.resource_bundle = { 'MaterialIcons-Regular' => 'Source/GMD/GMDIcons.ttf' }
+      sub.dependency 'HS-Font-Icons/Core'
   end
 
   s.subspec 'FARegular' do |sub|
       sub.source_files = 'Source/FARegular/*.swift'
       sub.resource_bundle = { 'FontAwesome5FreeRegular' => 'Source/FARegular/*.ttf' }
+      sub.dependency 'HS-Font-Icons/Core'
   end
 
   s.subspec 'FASolid' do |sub|
       sub.source_files = 'Source/FASolid/*.swift'
       sub.resource_bundle = { 'FontAwesome5FreeSolid' => 'Source/FASolid/*.ttf' }
+      sub.dependency 'HS-Font-Icons/Core'
   end
 
   s.subspec 'FABrand' do |sub|
       sub.source_files = 'Source/FABrands/*.swift'
       sub.resource_bundle = { 'FontAwesome5BrandsRegular' => 'Source/FABrands/*.ttf' }
+      sub.dependency 'HS-Font-Icons/Core'
   end
 
 end
