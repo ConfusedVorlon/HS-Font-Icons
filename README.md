@@ -42,17 +42,17 @@ import HS_Font_Icons
 
 ### UILabel
 ```Swift
-    labelName.icon = .public
+    labelName.setIcon(GMDIcon.public)
 
     labelName.textColor = UIColor.redColor()
 ```
 
 ### UIButton
 ```Swift
-    buttonName.setIcon(.public)
+    buttonName.setIcon(GMDIcon.public)
 
     //or if you want to set an icon size and/or specify the state, use:
-    buttonName.setIcon(.public, forState: .highlighted, iconSize: 30)
+    buttonName.setIcon(GMDIcon.public, forState: .highlighted, iconSize: 30)
 
     buttonName.setTitleColor(UIColor.redColor(), forState: .normal)
 ```
@@ -60,10 +60,10 @@ import HS_Font_Icons
 ### UIBarButtonItem
 ```Swift
     //Standard font size
-    barName.icon = .public
+     barName.setIcon(GMDIcon.public)
 
     //Custom font size
-    barName.setIcon(.public, iconSize: 35)
+    barName.setIcon(GMDIcon.public, iconSize: 35)
 
     barName.tintColor = UIColor.redColor()
 ```
