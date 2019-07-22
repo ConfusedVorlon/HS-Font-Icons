@@ -55,7 +55,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         c.label.text = resultSearchController.isActive ? filteredData[indexPath.row] : helper[indexPath.row]
         
-        let index = resultSearchController.isActive ? helper.index(of: filteredData[indexPath.row])! : indexPath.row
+        let index = resultSearchController.isActive ? helper.firstIndex(of: filteredData[indexPath.row])! : indexPath.row
         
         let icon = GMDIcon.allCases[index]
         

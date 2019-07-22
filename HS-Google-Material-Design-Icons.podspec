@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name = 'HS-Google-Material-Design-Icons'
-  s.version = '2.0.0'
-  s.swift_version = '4.2'
+  s.version = '2.1.0'
+  s.swift_version = '5.0'
   s.license = 'MIT'
   s.summary = 'Google Material Design Icons Library for iOS'
   s.description = <<-DESC
@@ -19,27 +19,27 @@ Pod::Spec.new do |s|
   s.source_files   = ['Source/*.swift']
   s.frameworks = 'UIKit', 'CoreText'
   s.requires_arc = true
-  
+
   s.default_subspecs = 'GMD','FARegular','FASolid','FABrand'
-  
+
   s.subspec 'GMD' do |sub|
       sub.source_files = 'Source/GMD/*.swift'
       sub.resource_bundle = { 'MaterialIcons-Regular' => 'Source/GMD/GMDIcons.ttf' }
   end
-  
+
   s.subspec 'FARegular' do |sub|
       sub.source_files = 'Source/FARegular/*.swift'
       sub.resource_bundle = { 'FontAwesome5FreeRegular' => 'Source/FARegular/*.ttf' }
   end
-  
+
   s.subspec 'FASolid' do |sub|
       sub.source_files = 'Source/FASolid/*.swift'
       sub.resource_bundle = { 'FontAwesome5FreeSolid' => 'Source/FASolid/*.ttf' }
   end
-  
+
   s.subspec 'FABrand' do |sub|
       sub.source_files = 'Source/FABrands/*.swift'
       sub.resource_bundle = { 'FontAwesome5BrandsRegular' => 'Source/FABrands/*.ttf' }
   end
-  
+
 end
