@@ -12,10 +12,10 @@ Pod::Spec.new do |s|
                      Easy use for buttons, labels, etc
                      Generate images if you must!
                    DESC
-  s.homepage = 'https://github.com/ConfusedVorlon/HS-Google-Material-Design-Icons'
-  s.screenshots = "https://raw.githubusercontent.com/ConfusedVorlon/HS-Google-Material-Design-Icons/master/resources/image1.png"
+  s.homepage = 'https://github.com/ConfusedVorlon/HS-Font-Icons'
+  s.screenshots = "https://raw.githubusercontent.com/ConfusedVorlon/HS-Font-Icons/master/resources/image1.png"
   s.authors = "Rob Jonson" , "Patrik Vaberer"
-  s.source = { :git => 'https://github.com/ConfusedVorlon/HS-Google-Material-Design-Icons.git', :tag => s.version }
+  s.source = { :git => 'https://github.com/ConfusedVorlon/HS-Font-Icons.git', :tag => s.version }
 
   s.ios.deployment_target = '9.0'
   s.source_files   = ['Source/*.swift']

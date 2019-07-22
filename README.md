@@ -6,10 +6,10 @@ Currently Supports
 - Google Material Icons (3.0.1)
 - Font Awesome (5.3)
 
-
+You can easily add your own font icon families (and please send a pull request if you do!)
 
 <p align="center">
-  <img height="480" src="https://raw.githubusercontent.com/ConfusedVorlon/HS-Google-Material-Design-Icons/master/resources/image1.png"/>
+  <img height="480" src="https://raw.githubusercontent.com/ConfusedVorlon/HS-Font-Icons/master/resources/image1.png"/>
 </p>
 
 ## Requirements
