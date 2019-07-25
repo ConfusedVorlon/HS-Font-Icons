@@ -16,9 +16,12 @@ When/if we get an 'official' name for the item, I'll rename the _tmp one
 2) How to update if the icon is not in the current ttf
 
 Get the latest woff file from Google
+https://github.com/google/material-design-icons/tree/master/iconfont
+
 Convert to ttf with https://everythingfonts.com/woff2-to-ttf
 
 Array of iconNames can be scraped with the following js
+(In Chrome, open the developer console, create a snippet with the following js and run it)
 
 //////////JS to scrape iconNames from https://material.io/tools/icons/?style=baseline
 var x = document.getElementsByClassName("icon-image-preview");
