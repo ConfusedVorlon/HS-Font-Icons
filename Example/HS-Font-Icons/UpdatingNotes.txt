@@ -18,6 +18,8 @@ When/if we get an 'official' name for the item, I'll rename the _tmp one
 Get the latest woff file from Google
 https://github.com/google/material-design-icons/tree/master/iconfont
 
+(better option now at https://github.com/jossef/material-design-icons-iconfont/blob/master/dist/fonts/MaterialIcons-Regular.ttf )
+
 Convert to ttf with https://everythingfonts.com/woff2-to-ttf
 
 Array of iconNames can be scraped with the following js
@@ -29,14 +31,14 @@ var iconNames = []
 
 for (var i=0; i<x.length; i++) {
 var element = x[i];
-var cName = element.classList[0].slice(9)
-var parts = cName.split("_")
+var initialName = element.innerText
+var parts = initialName.split("_")
 parts = parts.map(function(part){return part.charAt(0).toUpperCase() + part.substr(1);})
 
 var name = parts.join("")
 name = name.slice(0,1).toLowerCase()+name.slice(1)
 
-var protectedWords = ["public","extension","class"]
+var protectedWords = ["public","extension","class","repeat"]
 if (protectedWords.indexOf(name) > -1 ) {
     name = "_" + name
 }
