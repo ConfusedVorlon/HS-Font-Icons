@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'HS-Font-Icons'
-  s.version = '1.3.0'
+  s.version = '1.4.0'
   s.swift_version = '5.0'
   s.license = 'MIT'
   s.summary = 'Font icons. Easy to use icons that look perfect at any scale'
